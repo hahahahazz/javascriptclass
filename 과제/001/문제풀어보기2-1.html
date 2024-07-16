@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-1</title>
+</head>
+<body>
+  <pre>
+    1.prompt 사용자입력 
+  점수를 입력받아서 학점을 출력해 봅시다
+
+
+  1.
+  점수를입력받는다
+  점수에 대한 학점을 구한다
+  점수 출력
+  
+</pre>
+    <script>
+
+      let user = prompt("사용자의 이름을 입력하세요.");
+      let score = Number(prompt("점수를 입력하세요"));
+      if(score>=90){
+        document.write(user+" 님의 점수는 " + score + "점 이므로 학점 A 입니다.");
+      } else if(score>=80){
+        document.write(user+" 님의 점수는 " + score + "점 이므로 학점 B 입니다.");
+      } else if(score>=70){
+        document.write(user+" 님의 점수는 " + score + "점 이므로 학점 C 입니다.");
+      } else if(score>=60){
+        document.write(user+" 님의 점수는 " + score + "점 이므로 학점 D 입니다.");
+      }else{
+        document.write(user+" 님의 점수는 " + score + "점 이므로 학점 F 입니다. 낙제입니다.");
+      }
+    </script>
+</body>
+</html>

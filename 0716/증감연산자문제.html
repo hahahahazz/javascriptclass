@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자문제</title>
+</head>
+<body>
+    <h2> a, b, result1, result2 의 값을 예상해 보자.</h2>
+
+    <script>
+        let a = 10, b=10;
+        let result1, result2;
+        a++; //11 (10 연산의 결과값)
+        result1 = a++ + ++b; //11(지금 a =12) + 11
+        b++; //12 (연산의 결과값 11)
+        result2 = b++ + ++a; //12(13)+13
+
+        alert(a); //13
+        alert(b); //13
+        alert(result1); //22 
+        alert(result2); //25
+        
+        console.log(3>5);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-2</title>
+</head>
+<body>
+    <pre>
+        1.prompt 사용자입력 
+      점수를 입력받아서 학점을 출력해 봅시다
+
+
+      2. 1번 - 1번 문제를  3번 반복하기 
+         2번 - 1번 문제를  점수가 음수가 음력되기 전까지 반복하기
+
+      1.
+      점수를입력받는다
+      점수에 대한 학점을 구한다
+      점수 출력
+      2.1
+      반복 (3번)
+      -점수를입력받는다
+      -점수에 대한 학점을 구한다
+      -점수 출력
+      2.2
+      반복 (음수입력되기전까지)
+      -점수를입력받는다
+      -점수에 대한 학점을 구한다
+      -점수 출력
+    </pre>
+    
+    <script>
+      let user = prompt("사용자의 이름을 입력하세요.");
+      let score1 = Number(prompt("1과목 점수를 입력하세요"));
+      let score2 = Number(prompt("2과목 점수를 입력하세요"));
+      let score3 = Number(prompt("3과목 점수를 입력하세요"));
+      let grade = (score1+score2+score3)/3;
+
+      if(grade>=90){
+        document.write(user+" 님의 점수는 " + grade + "점 이므로 학점 A 입니다.");
+      } else if(grade>=80){
+        document.write(user+" 님의 점수는 " + grade + "점 이므로 학점 B 입니다.");
+      } else if(grade>=70){
+        document.write(user+" 님의 점수는 " + grade + "점 이므로 학점 C 입니다.");
+      } else if(grade>=60){
+        document.write(user+" 님의 점수는 " + grade + "점 이므로 학점 D 입니다.");
+      }else{
+        document.write(user+" 님의 점수는 " + grade + "점 이므로 학점 F 입니다. 낙제입니다.");
+      }
+
+      for(i=0; i<=0; i--){
+
+      }
+
+      
+
+
+    </script>
+</body>
+</html>

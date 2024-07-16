@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> 원주 :원의 둘레  : 지름 (반지름*2) * 원주율 </h2>
+    <h2> 원의 넓이 :   반지름(세로) *  반지름*원주율 (  가로  )  => 원주율*반지름^2</h2>
+
+    <script>
+
+        /*
+       
+        원의 넓이 구하기 )   지름을 입력받아 원의 넓이를  구하기 
+         원주율:3.14   
+
+        입력 : 지름
+        출력 : 원의 넓이
+
+        처리과정:
+ 
+*/
+
+        let a = Number(prompt("반지름(세로)의 길이를 입력하시오."));
+        let b = Number(prompt("반지름(가로)의 길이를 입력하시오."));
+        let result;
+
+        result = a*b*3.14;
+
+        alert(result);
+
+        document.write("반지름(세로)의 길이는 "+ a +", 반지름(가로)의 길이는 "+ b +"이다. 그러므로 원의 넓이는 "+ a +" X "+ b + " X " + "3.14  로 "+ result +" 이다.");
+
+
+
+    </script>
+    
+</body>
+</html>

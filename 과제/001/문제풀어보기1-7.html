@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-7</title>
+</head>
+
+<body>
+    <h3>7.  카드사용금액을 입력받아  50만원이상  "vvip"  30이상이면 "vip"  나머지 "bronze" 출력
+    </h3>
+    <script>
+       
+
+        let pay = Number(prompt("이번달 카드 사용금액을 입력하세요."));
+       
+        if (pay >= 500000){
+            document.write("당신의 사용금액은 50만원 이상입니다.<br> 이번달 등급은 vvip 입니다.");
+        } else if(pay >= 300000){
+            document.write("당신의 사용금액은 30만원 이상입니다.<br> 이번달 등급은 vip 입니다.");
+        } else{
+            document.write("당신의 이번달 등급은 bronze 입니다. 축하합니다.");
+        }
+        
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

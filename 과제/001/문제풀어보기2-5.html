@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-5</title>
+</head>
+
+<body>
+    <h3>5. 별출력 (단 *별 한개를 이용하기)</h3>
+
+    <script>
+
+        //  1)*
+        let a = "*";
+        document.write(a + "<br>");
+
+
+        // 2) *****
+        let b = "*";
+        for (i = 1; i < 6; i++) {
+            document.write(b);
+        }
+
+
+        //  3) *****
+        //     *****
+        //     *****
+        let c = "*";
+        let d = 5;
+        for (j = 1; j < 4; j++){                
+                document.write("<br>" + "*".repeat(d));
+            }
+           
+
+        // 4) *
+        //    **
+        //    ***
+
+        let e = "*";
+        let f = 3;
+
+        for (let h = 1; h <= f; h++) {
+            document.write("<br>" + "*".repeat(h) + "<br>");
+        }
+
+
+        // 5) ***
+        //    **
+        //    *
+        let g = "*";
+        let z = 3;
+
+        for (let x = 3; x <= z; x--) {
+            document.write("<br>" + "*".repeat(x) + "<br>");
+        }
+
+
+    </script>
+</body>
+
+</html>

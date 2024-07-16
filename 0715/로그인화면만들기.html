@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 로그인 화면 만들기  </title>
+    <style>
+        .wrap{
+            width: 400px;            
+            border: 1px solid black;
+            padding: 10px;   
+            margin: 0 auto;  /*상하여백 , 좌우여백은 자동으로 절반씩 */       
+        }
+        .img_wrap{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-image: url(data:image/png;base64,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);
+            background-position: center;
+            background-size: cover;
+            margin: 0 auto;
+        }
+        .info_wrap{
+            width: 300px;
+           /* height: 200px;*/
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 10px;
+            
+        }
+        .info_wrap input{
+            width: 98%;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+        .info_wrap button{
+            width: 100%;
+            height: 40px;
+            border: none;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="img_wrap">이미지 영역
+    </div>
+    <div class="info_wrap">
+        <input type="text" placeholder="ID">
+        <input type="text" placeholder="PASSWORD">
+        <button> 로그인 </button>        
+    </div>
+    
+</div>
+    
+</body>
+</html>
