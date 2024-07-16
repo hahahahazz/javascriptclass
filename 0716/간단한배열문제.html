@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        let kors = [  90,80,70,99,65,70];
+
+
+        // 0. 모두 점수 출력하기
+        // 1. 평균구하기
+        // 2. 평균보다 높은 학생 수 구하기
+
+        // document.write(kors);
+        // document.write("<br>");
+
+        // let a = kors[0] + kors[1] +kors[2] + kors[3] +kors[4] +kors[5];
+        // document.write(a);
+        // document.write("<br>");
+
+        // let b = a/5;
+        // document.write(b);
+        // document.write("<br>");
+
+        
+        // if(kors>b){
+        //     document.write(kors = "높다");
+        // } else{
+        //     document.write("낮다");
+        // }
+
+        //1.
+        console.log( kors[0]);
+        console.log( kors[1]);
+        console.log( kors[2]);
+        console.log( kors[3]);
+        console.log( kors[4]);
+        console.log( kors[5]);
+
+        for(let i =0; i<kors.length; i++){  // length 길이 = 0  1  2  3  4  5  
+            console.log(kors[i]);
+        }
+        
+        //2.
+        let sum = 0;
+        let avg;
+        sum = kors[0] + kors[1] +kors[2] + kors[3] +kors[4] +kors[5];
+        avg = sum/kors.length;
+        console.log(avg);
+
+        /* 1. 총합계 구하기
+        반복을 하자면
+             우선 배열요소 가져오기 
+             누적하기
+        
+        2. 평균구하기
+        3.평균출력하기
+
+        */   
+
+        let total = 0;
+        let average;
+        for(let i =0; i<kors.length; i++){
+            let kor = kors[i];
+            total = total + kor;
+        }
+        average = total / kors.length;  // 또는 6 이라고 해도된다.
+        console.log(average);
+
+
+        //3.평균보다 높은 학생수는?
+        let counter = 0;
+        for( let h = 0; h<kors.length; h++){
+            if(kors[h]>average){
+                counter++;
+            }
+        }
+            console.log(counter);
+
+
+    </script>
+
+
+
+</body>
+</html>

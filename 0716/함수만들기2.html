@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수만들기22</title>
+</head>
+
+<body>
+
+    <script>
+        //함수를 만들땐 기능과 입력과 반환을 명확히 써야한다.
+        //함수 호출() - 호출시에 값을 전달해야한다.
+        //함수가 반환되면 함수는 호출되면 코드를 수행하고 호출한 자리로 돌아온다.
+        //함수의 반환은 없거나 반드시 1개 여야 한다.
+
+        function a() {
+            alert("나는 함수이다.");
+
+        }
+
+
+        function b(num) {
+            for (let i = 1; i <= num; i++) {
+                alert("나는 함수다.");
+            }
+
+        }
+
+        function c() {
+            return 5;
+        }
+
+        function d() {
+            let lottos = [7, 15, 6, 11, 41];
+            return lottos;
+        }
+
+        function f() {
+            let lottos = [
+                [7, 15, 6, 11, 41],
+                [8, 15, 6, 41, 41],
+                [7, 25, 6, 11, 41],
+                [5, 15, 6, 11, 41],
+                [9, 15, 6, 11, 41]
+            ];
+
+            return lottos;
+        }
+
+
+        console.log(a());
+        console.log(b(3));
+        console.log(c());
+        console.log(d());
+        console.log(f());
+
+        // 함수는 특정기능을 수행하기 위한 (명령어 모음) 코드 덩어리이다.
+
+    </script>
+
+
+</body>
+
+</html>
