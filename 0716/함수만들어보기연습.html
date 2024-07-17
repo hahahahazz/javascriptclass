@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수만들어보기 연습</title>
+</head>
+
+<body>
+
+    <script>
+
+        function say() {  //함수를 선언 . 함수이름은 say = 개발자 지정, 주로 목적에 맞게 이름을 붙인다.. 매개변수 는 ()
+            alert("안녕?"); 
+            
+            let hi = "hello world";
+            return hi; // 리턴문 은 함수의 실행을 종료하고, 호출한 곳으로 되돌아 가면서 함수의 실행 결과를 반환 하는 문
+        }
+        console.log(say());
+        document.write("안녕하세요!<br>");
+
+
+
+
+        let a = average(85,74,93,41);
+        
+        function average(b,c,d,e){
+            let sum = b+c+d+e;
+            let device = sum/4;
+            document.write("합계는 "+sum+" 이므로 평균은 "+ device+"입니다.");
+            return device;
+        }
+        console.log(a);
+        console.log( average(44,58,65,71) );
+
+    
+
+
+
+    </script>
+
+</body>
+
+</html>
