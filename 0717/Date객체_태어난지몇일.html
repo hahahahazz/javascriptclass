@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체 태어난지 몇일되엇는지</title>
+</head>
+<body>
+    <h2>태어난지 몇 일 되었는지 구하기</h2>
+    <script>
+         //현재날짜구하기
+         let current = new Date();
+        console.log( current);
+
+        let bornDay = new Date("2009-02-01");
+
+        let toNow = current.getTime(); //밀리세컨드 (=천분의 1초)
+
+        let toFirst = bornDay.getTime(); 
+
+        let passedTime = toNow - toFirst ; //=밀리세컨드로 나온다.
+       // let passedDay = passedTime/(1000*60*60*24);   //1초가 1000 으로 나오기때문에 1000으로나눠준다.
+                                    // 1분  60  1시간 60   하루  24  로 나눈다.
+        let passedDay = Math.round(passedTime/(1000*60*60*24));  //매스는 소수점 없애주고 라운드는 반올림해주는!
+        alert(passedDay)
+
+
+
+
+    </script>
+</body>
+</html>

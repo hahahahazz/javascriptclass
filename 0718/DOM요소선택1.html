@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 선택 1</title>
+    
+    <script>
+        function change(){
+            //alert("dfdf"); 잘 기능하는지 확인
+            let wrap = document.getElementById("wrap");
+           // alert(wrap);
+           wrap.innerHTML = "내용을 변경";
+           wrap.style.width="100px";
+           wrap.style.height="100px";
+           wrap.style.backgroundColor="yellow";
+        }
+
+        function unchange(){
+            //alert("abab");
+            let wrap = document.getElementById("wrap");
+           // alert(wrap);
+           wrap.innerHTML = "내용을 변경해";
+           wrap.style.width="100px";
+           wrap.style.height="150px";
+           wrap.style.backgroundColor="green";
+        }
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <h3>getElementById 로 찾기 </h3>
+    <div id="wrap"></div>
+    
+    <button onclick="change()">클릭</button>
+    <button onclick="unchange()">클릭2</button>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열매서드2forEach흉내내기</title>
+</head>
+
+<body>
+      
+    <script>
+
+        let arr= [ "apple", "banana" , "mango"];
+
+        let  acornStudents = ["김솔", "김도현", "김무궁", "김세중", "김세현", "김정석","김채운", "백바울", "소병학", "송병화", "송수빈",
+         "용지민","이상민","이효진","장경호", "전우선", "전지형", "정보란","주상길","주형준","최문길","최형진","하예진","황지영"];
+
+
+
+
+       function myForEach(  func ){   // f  매개변수, 콜백함수  
+           for( let i=0; i< arr.length ; i++){
+                   func(  arr[i] , i);
+           }          
+
+       }
+
+
+       //콜백함수를 익명으로 전달하기
+       myForEach(  function( item, i){
+            alert( " 요소" + item +  " index" + i);
+       });
+
+
+
+       //콜백함수를 이름이 있는 함수로 전달하기
+       
+       myForEach( a );  //   함수를 작성해서 넘겨줌 
+                       //1.함수이름을 사용해서 넘겨줌
+                       //2.익명함수로 넘겨줌 
+
+       function a( item, index){  //a:함수이름,  매개변수 2, 입력정보 2임 
+             alert( item + " :  "  + index);
+       }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

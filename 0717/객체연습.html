@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+
+<body>
+
+
+    <script>
+        let phoneinfo = {   //폰정보  라는 객체를 변수로 설정 
+            price : 120,   //각 변수들 설정 가격, 모델, 색깔    거기에 해당하는 데이터
+            model : "s21+",
+            color : "sliver"
+            }
+            console.log(phoneinfo);   
+
+            console.log(phoneinfo.color);
+            console.log(phoneinfo.model);
+            console.log(phoneinfo.price);
+            console.log(phoneinfo["model"]);  //이렇게도 콘솔로그 입력할수 있다.
+
+            phoneinfo.price = 95;   //폰정보에 설정되잇는 데이터 값중 가격 부분을 95로 변경
+            console.log(phoneinfo.price);  //변경된 값 확인 
+
+            
+        let snack = {  //this 는 매서드에서 객체의 속성을 사용할때 this로!
+            name : "몽쉘", 
+            price : 4500,
+            weight : 250,        
+            showInfo : function(){     //이부분도  스낵 객체안에 포함된 변수중 하나 이고 함수실행
+                console.log(this.name);   //이 함수는 스낵의 정보를 보여주는 기능을 할것이다
+                console.log(this.price);  // 이함수는 44번 줄에 출력 단계를 설정해야  볼수있다
+                console.log(this.weight);  //이 정보 없고 19번 처럼 콘솔없으면 원래 안보인다.
+            },   
+            toString : function(){  // 이건 스낵객체를 이런 줄로 나타낼거다 라고 함수를 지정 한것
+                return this.name + " = " + this.weight + "g , " + this.price + "원";
+            }  //리턴값! 마지막에 보여지는 부분  즉 스낵 객체인 이 변수의 마지막에 해당하는 값
+            // 이 리턴값도 46,47번 이 있어야 출력 해서 보여진다.
+        }
+        snack.showInfo(); //여기는 출력 단계 , 위 showinfo  콘솔로그 수행되려면 출력을 해야 나온다.
+// 스낵 안의 함수기능을 실행 시키고 싶을 땐 객체.변수1();    입력하면 된다.
+        let rtn = snack.toString();  //이부분은 스낵의 투스트링 부분을 보여주기위해
+        console.log(rtn);   //변수 새로 만들어 거기 설정시켜  출력함.
+        
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

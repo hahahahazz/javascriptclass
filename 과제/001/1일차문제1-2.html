@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1일차 문제 1-2</title>
+    <style>
+      .threeLiter{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+      }
+      .first, .second, .third{
+        width: 100%;
+        height: 100px;
+        border: 1px solid violet;
+      }
+      .fiveLiter{
+        width: 300px;
+        height: 500px;
+        border: 1px solid black;
+      }
+      .fst, .snd, .trd, .fth, .vth{
+        width: 100%;
+        height: 100px;
+        border: 1px solid violet;
+      }
+
+    </style>
+</head>
+<body>
+    
+  
+
+  <button type="button" id="add3" class="addWater3"> (3L) 물 채우기 </button>
+  <button type="button" id="add5" class="addWater5"> (5L) 물 채우기 </button>
+  <button type="button" id="minus3" class="minusWater3"> 3리터를 5리터로 옮기기 </button>
+  <button type="button" id="minus5" class="minusWater5"> 5리터의 물 비우기 </button>
+
+  <div class="threeLiter">
+    <div class="third">3</div>
+    <div class="second">2</div>
+    <div class="first">1</div>
+  </div>
+
+  <br><br>
+
+  <div class="fiveLiter">
+    <div class="vth">5</div>
+    <div class="fth">4</div>
+    <div class="trd">3</div>
+    <div class="snd">2</div>
+    <div class="fst">1</div>
+  </div>
+
+    <script>
+      function fullwater(){
+        let a ;
+        document.querySelector("#first").addEventListener("click", fullwater);
+
+      } 
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

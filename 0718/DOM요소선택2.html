@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 선택 2</title>
+
+    <script>
+        function change(){
+            let wrap = document.getElementsByClassName("result")[0];
+            wrap.innerHTML = "내용을 변경";
+            wrap.style.width = "100px";
+            wrap.style.height = "100px";
+            wrap.style.backgroundColor = "yellow";
+            //getElementByClassName 이거는 위의 내용들은 배열이지  하나의 내용이 아니다. 
+
+        }
+
+        function unchange() {
+            let wrap = document.getElementsByClassName("result")[0];
+            wrap.innerHTML = "";
+           
+        }
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <h3>getElementsByClassName 로 찾기 </h3>
+    <div id="wrap" class="result"></div>
+
+    <button onclick="change()">클릭</button>
+    <button onclick="unchange()">클릭2</button>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+    
+    <script>
+
+        // function hello(func){ 
+        //     alert("1초 후에 실행해 줄게");
+        //     func();
+        // }
+        // hello(function(){
+        //     alert("이 코드 실행해 줘.");
+        // });
+        // hello(a);
+        // //setTimeout= 특정시간 후에 코드를 실행시켜주는 함수 기능.
+        // //코드를 준다 == 함수를 준다,. 시간을 준다(밀리세컨드 단위로 )
+        // setTimeout(function(){
+        //     alert("hi");
+        // }, 2000); 
+
+        // function a(){
+        //     alert("hi2");
+        // } 
+        // //        (함수, 시간)   //setTimeout (a(),3000); 은 안된다 a() 주의!   주의사항, 함수이름만 작성해야 한다. a()=함수가 호출되고 실행된 다음 반환값이 매개변수가 된다.
+        // setTimeout(a,3000); //a라는 함수를 3초 이후에 실행해주세요.
+
+
+
+        function callme(name){
+            alert("나의 이름을 불러줘");
+            //name();
+        }
+        callme(function(){
+            alert("너의 이름을 알려줘!");
+        });
+      
+
+        //setTimeout(function(){},1000);
+
+
+        // setTimeout(function(){
+        //     alert("hi");
+        // },1000);
+
+        // setTimeout(function(){
+        //     let  acornStudents = ["김솔", "김도현", "김무궁", "김세중", "김세현", "김정석","김채운", "백바울", "소병학", "송병화", "송수빈",
+        //  "용지민","이상민","이효진","장경호", "전우선", "전지형", "정보란","주상길","주형준","최문길","최형진","하예진","황지영"];
+        
+        //  for (let i=0; i<acornStudents.length; i++){
+        //     console.log(acornStudents[i]);
+        //  }
+        // },1000);
+
+
+
+        // function printName(){
+        //     console.log("학생이름 출력");
+        //     let  acornStudents = ["김솔", "김도현", "김무궁", "김세중", "김세현", "김정석","김채운", "백바울", "소병학", "송병화", "송수빈",
+        //  "용지민","이상민","이효진","장경호", "전우선", "전지형", "정보란","주상길","주형준","최문길","최형진","하예진","황지영"];
+        
+        //  for (let i=0; i<acornStudents.length; i++){
+        //     console.log(acornStudents[i]);
+        //  }
+        // }
+
+        // setTimeout(printName,5000);
+
+
+
+    </script>
+</body>
+</html>

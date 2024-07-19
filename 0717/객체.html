@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 하나의 도서정보
+        //  도서정보에 필요한 데이터
+        /* 
+        도서이름
+        도서가격
+        출판사
+        저자
+
+        */
+
+        let bookName = "뇌";
+        let bookPrice = 15000;
+        let bookpublisher = "열린책들 ";
+        let bookAuthor = "베르나르베르베르";
+//이건 변수 4개 라고 일컫고
+
+// 하나의 도서라는 책이가지는 속성들
+// 자바스크립트에서 객체 표현법  = JSON
+
+        let bookInfo = {
+            name : "뇌",  //나의 속성중에  네임이라는 속성의 이름은 뇌 이다.
+            price : 13000,
+            publisher : "열린책들",
+            author : "베르나르베르베르"
+//이건 객체 4개라고 한다  구조체이다. 
+//데이터를 담는게 객체
+        }
+
+        console.log(bookInfo);
+
+
+
+        //객체의 속성 이용
+        console.log(bookInfo.name);
+        console.log(bookInfo.price);
+
+        //객체 속성 변경(저장)
+        bookInfo.price = 13500;
+        console.log(bookInfo.price);
+
+        bookInfo.publisher = "에이콘";
+        console.log(bookInfo.publisher);
+
+        
+
+    </script>
+</body>
+
+</html>

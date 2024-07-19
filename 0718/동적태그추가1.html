@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적태그 추가1</title>
+<script>
+    function createE(){
+
+// 태그생성, 추가
+//부모를 선택한다.
+//부모에 추가한다.
+        let ul = document.getElementById("result");
+        let li = document.createElement("li");
+        li.innerHTML="사과";
+        ul.appendChild(li);
+
+
+        //li 태그 클릭시 삭제하기
+        li.addEventListener("click", function(){ //클릭을 햇을때 . 해야할 일
+             // let p =   this.parentElement;     p의부모를 찾고
+                   // p.removeChild(li);   p의 li를 삭제할게 라는 의미
+            
+            this.remove();
+
+        });  
+    }
+
+</script>
+
+
+</head>
+<body>
+    <button onclick="createE()"> 클릭 </button>
+
+    <ul id="result">
+
+    </ul>
+</body>
+</html>
