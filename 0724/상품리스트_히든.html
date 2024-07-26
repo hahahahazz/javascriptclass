@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>상품리스트 히든</title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            border: 1px solid black;
+            
+            /*width: 760px;
+
+            margin: 0 auto;
+
+            display: flex;
+            flex-wrap: wrap;*/
+        }
+        li{
+            border: 1px solid blueviolet;
+            width: 250px;
+            height: 300px;
+
+            position: relative;
+               /*넘어서는 내용이 보이지 않도록 */
+        overflow: hidden;
+
+
+        }
+
+
+        /*이미지*/
+        li img{
+            width: 250px;
+            height: 300px;
+        }
+        /*히든영역*/
+        .hidden_wrap{
+            width: 100%;
+            background-color: beige;
+            height: 60px;
+            border: 1px solid rebeccapurple;
+
+            position: absolute;
+            bottom: -60px;
+            
+            transition: 0.5s;
+            opacity: 0.5;
+
+
+        }
+
+        li:hover .hidden_wrap{
+            bottom: 0px;
+       
+        }
+
+
+    </style>
+	
+
+<body>
+
+    <ul>
+        <li><img src="/imagees/자는고양이.webp">
+            <!--히든영역-->
+            <div class="hidden_wrap">🤩 </div>
+         </li>
+    </ul>
+
+</body>
+</html>

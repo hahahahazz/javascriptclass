@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 만들기2</title>
+    <style>
+
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+
+            
+        }
+        .menu{
+            display: flex;
+
+        }
+        .menuitem{
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;  /*없으면 상위메뉴의 글자밑을 침범한다*/
+
+        }
+        .submenu{
+            display: none;
+        }
+        .menuitem:hover .submenu{
+            display: block;
+            background-color: bisque;
+            width: 90%; /* 부모의 크기에 80% 만큼 작게 */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <ul class="menu">
+        <li class="menuitem">상위메뉴1
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+        <li class="menuitem">상위메뉴2
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+        <li class="menuitem">상위메뉴3
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+        <li class="menuitem">상위메뉴4
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+        <li class="menuitem">상위메뉴5
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

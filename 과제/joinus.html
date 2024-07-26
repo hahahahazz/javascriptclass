@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 800px;
+            border: 1px solid violet;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        tr{
+            font-size: 12px;
+            height: 40px;
+        }
+        th, td{
+            border: 1px solid black;
+        }
+
+
+    </style>
+    <script>
+        function check(){
+            let frm =document.frm
+            let userName = frm.userName
+            let userId = frm.userId
+            let userPw1 = frm.userPw1
+            let userPw2 = frm.userPw2
+            let userEmail1 = frm.userEmail1
+            let userEmail2 = frm.userEmail2
+            if(userName.value == ""){
+                alert("이름을 입력하세요");
+                userName.focus();
+            }else if(userId.value == ""){
+                alert("아이디를 입력하세요");
+                userId.focus();
+            }else if(userPw1.value == ""){
+                alert("비밀번호를  입력하세요");
+                userPw1.focus();
+            }
+            else if(userPw2.value == ""){
+                alert("비밀번호 확인  입력하세요");
+                userPw2.focus();
+            }
+            else if(userEmail1.value == ""){
+                alert("이메일을 입력하세요");
+                userEmail1.focus();
+            }
+            else if(userEmail2.value == ""){
+                alert("이메일을 입력하세요");
+                userEmail2.focus();
+            }else{
+                alert("입력을 완성하였습니다.");
+            }
+
+        }
+        
+        function setDomain(){
+            let frm = document.frm;
+            let op = frm.op;
+            let userEmail2 = frm.userEmail2;
+            let optext = op.options[op.selectedIndex].text;
+            let opvalue = op.options[op.selectedIndex].value;
+            userEmail2.value=optext;
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <section>
+        <form name="frm" method="post">
+            <table>
+                <caption>회원가입</caption>
+                <tr>
+                    <th>이름</th><td><input type="text" name="userName"></td>
+                </tr>
+
+                <tr>
+                    <th>아이디</th><td><input type="text" name="userId"><button type="button">중복확인</button></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th><td><input type="password" name="userPw1"> 
+                    <br><span>비밀번호는 숫자 영문 조합만 가능합니다. </span></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th><td><input type="password" name="userPw2"></td>
+                </tr>
+                <tr>
+                    <th>이메일</th><td><input type="text" name="userEmail1">@ <input type="text" name="userEmail2">
+                        <select onchange="setDomain()" name="op">
+                            <option value="">선택하세요</option>
+                            <option value="">naver.com</option>
+                            <option value="">gmail.com</option>
+                            <option value="">hanmail.net</option>
+                        </select>
+                        <button type="button">중복확인</button>
+                    </td>
+                </tr>
+                <tr><th>학년/반</th>
+                    <td>
+                    <select>
+                        <option value="">선택하세요</option>
+                        <option value="">1학년</option>
+                        <option value="">2학년</option>
+                        <option value="">3학년</option>
+                    </select> 학년
+                    <select>
+                        <option value="">선택하세요</option>
+                        <option value="">1반</option>
+                        <option value="">2반</option>
+                        <option value="">3반</option>
+                    </select>반
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <button type="button" onclick="check()">가입</button>
+                    <button type="button">취소</button>
+                </td>
+                </tr>
+
+
+            
+
+
+                      
+        
+        
+        
+        
+        
+        
+        
+        </table>
+        </form>
+
+
+    </section>
+    
+</body>
+</html>

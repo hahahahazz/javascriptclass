@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션앱솔루트연습</title>
+
+    <style>
+
+        header{
+            height: 100px;
+            background-color: rgb(88, 88, 116);
+
+            position: relative;
+        }
+
+        .menu{
+            height: 50px;
+            width: 300px;
+            border: 1px solid black;          
+            background-color: blanchedalmond;
+              
+            position: absolute;
+            top:10px;
+            right: 50px;
+            
+        }
+
+        .a{ /*부모가 이미 position: absolute; 를 가지고 있다면 별도로 position을 정하지 않아도 된다 */
+            background-color: rgb(132, 87, 21);
+            
+
+            position: absolute;
+            bottom :0px;
+            right: 0px;
+          
+        }
+        .b{
+            background-color: yellow;
+            
+
+            position: absolute;
+            top :0px;
+            left: 0px;
+          
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu">
+            <div class="a">a</div>
+            <div class="b">b</div>
+        </div>
+    </header>
+    
+    
+</body>
+</html>

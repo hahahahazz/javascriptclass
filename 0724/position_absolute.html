@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 앱솔루트</title>
+    <style>
+        header{
+            height: 300px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            position: relative;
+        }
+        .menu{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h3> position absolute 는 상위부모를 기준으로 원하는 위치에 배치할 수있다.</h3>
+
+    <ul>
+        <li> 상위요소에 position relative</li>
+        <li> 상위요소에 position absolute</li>
+        <li>위의 두 개 가 없는 경우에는 전체를 기준으로 원하는 위치에 배치함 fixed와 같은! - 스크롤 된다.</li>
+
+    </ul>
+    <header>
+        <div class="menu"> 메뉴 </div>
+    </header>
+    
+</body>
+</html>

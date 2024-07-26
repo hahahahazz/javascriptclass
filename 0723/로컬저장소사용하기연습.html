@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬저장소사용하기 1,2,3,4</title>
+</head>
+<body>
+    
+    
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        //로컬저장소에 데이터 저장하기(키, 키값(value))
+        localStorage.setItem("testKey","딸기,수박");  
+        // 또는  
+        //localStorage["testKey"] = "딸기수박";     위와 동일한 코드
+
+
+        //로컬저장소에 데이터를 가져오기(키이름으로 가져옴)
+        let result = localStorage.getItem("testKey");
+        // 또는
+        //let result = localStorage["testKey"];     이렇게로 가져오기
+        console.log(result);
+
+
+        // 로컬저장소 사용하기  1.저장(문자열화 시킨후 로컬저장소에 저장) 2.가져오기(읽어오기) 3.배열로변환하기
+
+        let search = ["홈런볼", "칸쵸", "씨리얼", "몽쉘", "빅파이", "마가렛트"];
+         
+        let a = JSON.stringify(search); //JSON.stringfy(): 객체나 배열을 하나의 문자열로 만들어 준다
+        console.log(a);
+        localStorage.setItem("search", a);
+
+        let readA = localStorage.getItem("search");
+        console.log(readA);
+
+        let readSearch = JSON.parse(readA); //배열이나 객체의 구조를 가진 문자열을 실제 객체나 배열로 변환해 주는 기능을 제공한다
+        console.log(readSearch);
+
+
+
+
+
+     // body 의 ul 이용해서 배열의 내용들을 스크립트 리스트로 나열하기   
+        let snacks = ["홈런볼", "칸쵸", "씨리얼", "몽쉘", "마가렛트"];
+         
+         let b = JSON.stringify(snacks); //JSON.stringfy(): 객체나 배열을 하나의 문자열로 만들어 준다
+         localStorage.setItem("snacks", b);
+ 
+         let readB = localStorage.getItem("snacks");
+ 
+         let readSnacks = JSON.parse(readB); //배열이나 객체의 구조를 가진 문자열을 실제 객체나 배열로 변환해 주는 기능을 제공한다
+
+        console.log(readSnacks);
+
+
+        let list = document.querySelector(".list");    //리스트는 바디에 들어잇는 ul의 클래스이름
+        let str=""
+        for(let i = 0; i<readSnacks.length; i++){
+            let item = readSnacks[i]; 
+            str += "<li>" + item + "</li>";
+        }
+        list.innerHTML = str;
+
+
+    </script>
+    
+</body>
+</html>

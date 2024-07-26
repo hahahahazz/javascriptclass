@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 감독</title>
+    <style>
+        section {
+            position: relative;
+        }
+
+        .foot a {
+            animation: slideDown 2s infinite;
+            font-size: 2em;
+            text-decoration: none;
+            font-size: 2em;
+            color: black;
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+        }
+        @keyframes slideDown {
+            0% {color: black;
+            }25% { color: blue;
+            } 50% {color: green;
+            } 75% {color: red;
+            }100% {color: hotpink;
+            }
+        }
+/**/
+        .direc_wrap {
+            width: 1200px;
+            height: 600px;
+            padding: 25px;
+            display: flex;
+            margin: 0 auto;
+            border: 1px solid limegreen;
+            border-radius: 5%;
+            margin-bottom: 20px;
+        }
+
+        .direc_img img {
+            width: 400px;
+            height: 600px;
+        }
+        .direc_contents{
+            margin: 0 auto;
+        }
+        .direc_contents ul {
+            width: 700px;
+            list-style: none;
+            color: black;
+            font-size: 18px;
+            position: relative;
+        }
+        .direc_contents a{
+            text-decoration: none;
+            color: darkslategrey;
+        }
+        .direc_contents button{
+            border: 0;
+            outline: none;
+            font-size: 20px;
+            background-color: rgba(255, 228, 196, 0.079);
+        }
+        #open1, #hi, #mad, #hitch, #old{
+            background-color: rgba(255, 228, 196, 0.226);
+        }
+        #desc1, #hello, #max, #cock, #boy{
+            display: none;
+            background-color: rgba(95, 158, 160, 0.225);
+        }
+        #close{
+            background-color: rgba(0, 0, 255, 0.109);
+            position: absolute;
+            right: 0;
+        }
+/**/
+        .info{
+            position: fixed;
+            width: 1200px;
+            height: 1000px;
+            background-color: rgba(0, 255, 255, 0.093);
+            right: -1100px;
+            transition: 0.7s;            
+        }
+        .info.show {
+            right: 10px;
+        }        
+    </style>
+    <script>
+        function showDetail(){
+            document.querySelector('#desc1').style.display = "block";
+            document.querySelector('#open1').style.display = "none";
+        }
+        function hideDetail(){
+            document.querySelector('#desc1').style.display = "none";
+            document.querySelector('#open1').style.display = "block";
+        }
+
+        function showCameron(){
+            document.querySelector('#hello').style.display = "block";
+            document.querySelector('#hi').style.display = "none";
+        }
+        function hideCameron(){
+            document.querySelector('#hello').style.display = "none";
+            document.querySelector('#hi').style.display = "block";
+        }
+
+        function showNolan(){
+            document.querySelector('#max').style.display = "block";
+            document.querySelector('#mad').style.display = "none";
+        }
+        function hideNolan(){
+            document.querySelector('#max').style.display = "none";
+            document.querySelector('#mad').style.display = "block";
+        }
+
+        function showAlfred(){
+            document.querySelector('#cock').style.display = "block";
+            document.querySelector('#hitch').style.display = "none";
+        }
+        function hideAlfred(){
+            document.querySelector('#cock').style.display = "none";
+            document.querySelector('#hitch').style.display = "block";
+        }
+        
+        function showPark(){
+            document.querySelector('#boy').style.display = "block";
+            document.querySelector('#old').style.display = "none";
+        }
+        function hidePark(){
+            document.querySelector('#boy').style.display = "none";
+            document.querySelector('#old').style.display = "block";
+        }
+
+        /**/
+        function showinfo(){
+            let info = document.querySelector(".info");
+            info.classList.toggle("show");
+        
+        }
+       
+</script>
+</head>
+<body>
+    <section>
+    <h1>Movie Director</h1> 
+        <br><br>
+        <ul>
+            <li class="direc_wrap">
+                <div class="direc_img"><img src="https://cdn.epeopletoday.com/news/photo/201412/3522_4570_1111.jpg">
+                </div>
+                <div class="direc_contents">
+                    <ul>
+                        <li>이름 : 스티븐 스필버그</li>
+                        <li>출생 : 1946년생</li>
+                        <li>특징 : 스필버그는 정식으로 영화를 배운적이 없지만 <br>
+                            영화를 만드는 데 필요한 모든 능력들이 뛰어난 올라운더 먼치킨이다.(feat.나무위키) </li>
+                            <br>
+
+                        <button onclick="showDetail()" id="open1">🎥필모그래피</button>
+                        <div id="desc1">
+                            <ul>🎥필모그래피
+                                 <div class="info">
+                                    <video src="./화면 녹화 중 2024-07-25 160219.mp4" autoplay muted controls></video>
+                                 </div>
+
+                                <li>1975년 <button onclick="javascript:showinfo();">죠스</button></li>
+                                <li>1982년 <button onclick="javascript:showinfo();">E.T</button></li>
+                                <li>1984년 <button onclick="javascript:showinfo();">인디아나 존스와 마궁의 사원</button></li>
+                                <li>1985년 <button onclick="javascript:showinfo();">백투더퓨쳐</button></li>
+                                <li>1993년 <button onclick="javascript:showinfo();">쥬라기공원</button></li>
+                                <li>1997년 <button onclick="javascript:showinfo();">맨인블랙</button></li>
+                                <li>1998년 <button onclick="javascript:showinfo();">라이언 일병 구하기</button></li>
+                                <li>2002년 <button onclick="javascript:showinfo();">캐치 미 이프 유 캔</button></li>
+                                <li>2004년 <button onclick="javascript:showinfo();">터미널</button></li>
+                                <li>2005년 <button onclick="javascript:showinfo();">우주전쟁</button></li>
+                                <li>2007년 <button onclick="javascript:showinfo();">트랜스포머</button></li>
+                                <li>2022년 <button onclick="javascript:showinfo();">더 파벨만스</button></li>
+                                <li>그 외에도 다수의 작품이 있으며 그는 쉬지않고 영화를 제작하며<br>
+                                    2026년 제목 미정의 오리지널 영화를 제작하고 있다. </li>
+                            </ul>
+                            <button onclick="hideDetail()" id="close">close</button>
+
+                        </div>                        
+                    </ul>
+                </div>
+            <li class="direc_wrap">
+                <div class="direc_img"><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/James_Cameron_October_2012.jpg">
+                </div>
+                <div class="direc_contents">
+                    <ul>
+                        <li>이름 : 제임스 카메론</li>
+                        <li>특징 : 미국에서 활동하는 캐나다 출신의 영화 감독, 각본가, 영화 제작자이자 <br>
+                            해양 탐험가, 환경 운동가.</li><br>
+                            <button onclick="showCameron()" id="hi">🎥필모그래피</button>
+                            <div id="hello">
+                            <ul>🎥필모그래피
+                            <li>1984년 <a href="javascript:showinfo();">터미네이터</a></li>
+                            <li>1985년 <a href="javascript:showinfo();">람보</a></li>
+                            <li>1986년 <a href="javascript:showinfo();">에이리언2</a></li>
+                            <li>1997년 <a href="javascript:showinfo();">타이타닉</a></li>
+                            <li>2009년 <a href="javascript:showinfo();">아바타</a></li>
+                            <li>2022년 <a href="javascript:showinfo();">아바타 : 물의 길</a></li>
+                            <li> 그는 현재 아바타 3 를 2025년 개봉예정으로 준비중이며 <br>
+                                아바타 속편으로 5편 연속 제작 예정이라고 한다. (feat.나무위키)
+                            </li>
+                        </ul>
+                        <button onclick="hideCameron()" id="close">close</button>
+
+                        </div>
+                    </ul>
+                </div>
+                </div>
+                
+
+            <li class="direc_wrap">
+                <div class="direc_img"><img
+                        src="https://mydaily.co.kr/photos/2019/05/17/2019051710553846051_l.jpg"></div>
+                <div class="direc_contents">
+                    <ul>
+                        <li>이름 : 크리스토퍼 놀란</li>
+                        <li>특징 : 영국과 미국의 영화 감독이자, 각본가. <br>
+                            아날로그 애호가로 필름으로 영화 전체를 찍어내는 몇 안되는 감독이다. <br>
+                            (이 페이지 제작자의 최애 감독입니다.)</li><br>
+                            <button onclick="showNolan()" id="mad">🎥필모그래피</button>
+                            <div id="max">
+                            <ul>🎥필모그래피
+                            <li>2001년 <a href="javascript:showinfo();">메멘토</a> (연출,각본)</li>
+                            <li>2005년 <a href="javascript:showinfo();">배트맨비긴즈</a> (연출,각본)</li>
+                            <li>2008년 <a href="javascript:showinfo();">다크나이트</a> (연출,각본)</li>
+                            <li>2010년 <a href="javascript:showinfo();">인셉션</a> (연출,각본,제작)</li>
+                            <li>2012년 <a href="javascript:showinfo();">다크 나이트 라이즈</a> (연출,각본)</li>
+                            <li>2014년 <a href="javascript:showinfo();">인터스텔라</a> (연출, 각본, 제작)</li>
+                            <li>2017년 <a href="javascript:showinfo();">덩케르크</a> (연출, 각본, 제작)</li>
+                            <li>2020년 <a href="javascript:showinfo();">테넷</a> (연출, 각본, 제작)</li>
+                            <li>2023년 <a href="javascript:showinfo();">오펜하이머</a> (연출, 각본, 제작)</li>
+                            
+                        </ul>
+                        <button onclick="hideNolan()" id="close">close</button>
+
+                        </div>
+                    </ul>
+                </div>
+                </div>
+
+
+
+            <li class="direc_wrap">
+                <div class="direc_img"><img
+                        src="https://blog.kakaocdn.net/dn/Xueh2/btqE33cTDce/nGK51HdWZNxk71a5GBZfZk/img.jpg"></div>
+                <div class="direc_contents">
+                    <ul>
+                        <li>이름 : 알프레도 히치콕</li>
+                        <li>출생 : 1899년 런던 출생 / 1980년 80세 의 나이로 별세</li>
+                        <li>특징 : 걸작 스릴러 영화들을 만든 감독답지 않게, 어렸을 때는 무척 겁 많고 소심했다고 한다. <br>
+                            자기가 만든 영화에 카메오로 출연하는 버릇이 있어서, 그의 영화에서 그를 찾아보는 것도 잔재미이다.</li><br>
+                            <button onclick="showAlfred()" id="hitch">🎥필모그래피</button>
+                            <div id="cock">
+                            <ul>🎥필모그래피
+                            <li>1940년 <a href="javascript:showinfo();">레베카</a></li>
+                            <li>1954년 <a href="javascript:showinfo();">이창</a></li>
+                            <li>1958년 <a href="javascript:showinfo();">현기증</a></li>
+                            <li>1959년 <a href="javascript:showinfo();">북북서로 진로를 돌려라</a></li>
+                            <li>1960년 <a href="javascript:showinfo();">싸이코</a></li>
+                        </ul>
+                        <button onclick="hideAlfred()" id="close">close</button>
+
+                        </div>
+                    </ul>
+                </div>
+                </div>
+
+
+            <li class="direc_wrap">
+                <div class="direc_img"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Marie_Claire_Korea_%EC%9E%84%EA%B6%8C%ED%83%9D%EA%B3%BC_10%EC%9D%B8%EC%9D%98_%EA%B0%90%EB%8F%85%EB%93%A4_%EB%B0%95%EC%B0%AC%EC%9A%B1.png">
+                </div>
+                <div class="direc_contents">
+                    <ul>
+                        <li>Name</li>
+                        <li>출생</li>
+                        <li>첫 작품</li>
+                        <li>특징</li><br>
+                        <button onclick="showPark()" id="old">🎥필모그래피</button>
+                            <div id="boy">
+                        <ul>🎥필모그래피
+                            <li>dddd</li>
+                        </ul>
+                        <button onclick="hidePark()" id="close">close</button>
+
+                        </div>
+                    </ul>
+                </div>
+                </div>
+        </ul>
+        <div class="foot">
+            <a href="#">맨위로</a>
+        </div>
+
+        
+    </section>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oZS74-w719E" frameborder="0"></iframe>
+</body>
+
+</html>

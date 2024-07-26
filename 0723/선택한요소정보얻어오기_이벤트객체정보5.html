@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택한요소정보얻어오기_이벤트객체정보55555</title>
+    <style>
+
+    </style>
+
+
+
+</head>
+
+<body>
+<h4> 이벤트 객체정보를 이요해서 선택한 요소의 내용 얻어오기</h4>
+
+    <div  class="item">아메리카노</div>  <!--id는 여러개 잇을수없다?-->
+    <div  class="item">라떼</div>
+    <div  class="item">망고쥬스</div>
+    
+    <script>
+
+        let items = document.querySelectorAll(".item");  //배열로 반환됨
+        
+        for ( let i = 0; i<items.length; i++){
+            let item = items[i];
+            item.addEventListener("click", e => alert(e.target.innerHTML + " 선택"));
+//item.addEventListener("click", e =>{ alert(e.target.innerHTML + " 선택")});
+//수행할 코드가 한줄인 경우 중괄호 블럭생략가능 
+            
+        }
+
+
+
+
+    </script>
+
+
+
+    
+
+</body>
+
+</html>

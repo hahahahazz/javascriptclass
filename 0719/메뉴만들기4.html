@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 만들기4</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .menu {
+            display: flex;
+
+        }
+
+        .menuitem {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+            background-color: blanchedalmond;
+            line-height: 50px;
+
+            overflow: hidden;
+            /*50픽셀보다 내용이 많기 때문에 넘치는건 감추겟다*/
+
+        }
+
+        .menu:hover .menuitem{
+            height: 200px;
+
+            transition: 0.4s; /*천천히 늘어나게끔*/
+
+            background-color: beige;
+        }
+
+/*      .sub-menu{             
+            margin-top: 50px;      
+                
+        }
+        .visual{
+            height: 300px;
+            background-color: red;
+        }
+*/
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+
+        <li class="menuitem">상위메뉴1
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+
+        <li class="menuitem">상위메뉴2
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+
+        <li class="menuitem">상위메뉴3
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+
+    </ul>
+</body>
+
+</html>

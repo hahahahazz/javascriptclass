@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 만들기3</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .menu {
+            display: flex;
+
+        }
+        .menuitem {
+            width: 200px;
+            height: 50px;
+            border: 1px solid black;
+
+        }
+
+        .item-name{
+            padding: 10px 20px 50px 20px; /*순서는  위 오른쪽 아래 왼쪽*/
+
+        }
+        .submenu {
+            display: none;
+
+        }
+        .menuitem:hover .submenu {
+            display: block;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li class="menuitem">
+            <div class="item-name">상위메뉴1</div>
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+        <li class="menuitem">
+            <div class="item-name">상위메뉴2</div>
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+        <li class="menuitem">
+            <div class="item-name">상위메뉴3</div>
+            <ul class="submenu">
+                <li>하위메뉴1</li>
+                <li>하위메뉴2</li>
+                <li>하위메뉴3</li>
+                <li>하위메뉴4</li>
+            </ul>
+        </li>
+
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 구글 페이지 2</title>
+
+    <style>
+        ul{
+            list-style: none;
+            
+        }
+        nav{
+            height: 100px;
+            background-color: lavender;
+            
+            margin-top: 100px; /*위 공간에 여백을 주어 아래로 내리는! */
+            position: relative;  /*부모로 지정!  주의사항! 부모가 높이가 있어야 자식요소도 가진다.*/
+        }
+
+        .menu{
+            position: absolute;  /*앱솔루트로 설정하면 크기가 내용만큰 줄어든다.*/
+            right: 100px;
+
+            display: flex;
+            height: 100px;
+            align-items: center; /*수직 가운데 맞춤*/
+
+        }
+        .item{
+            font-size: 12px;
+            text-align: center;
+            border: 0.5px solid rgb(219, 171, 171);
+            border-radius: 50%;
+
+        }
+        .item1{
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+        .item1:hover{
+            background-color: antiquewhite;
+        }
+        .item2{
+            width: 40px;
+            height: 40px;
+
+            background-image: url(https://lh3.googleusercontent.com/ogw/ADGmqu_sKQ74r14XW5bWUAIRoXn7hut8HTvtMAAH_iD3EA=s64-c-mo);
+            background-size: cover ;
+            background-position: center;
+        }
+        .item2:hover{
+            box-shadow: 0px 0px 10px 0px lightgrey;
+        }
+        .logo_title{
+            text-align: center;
+            margin-top: 100px;
+
+        }
+        .logo_title img{
+            width: 280px;
+            height: 100px;
+        }
+
+        .search{
+            margin-top: 100px;
+        }
+
+        .search_bar{ /*검색바 영역 크기, 테두리 지정*/
+            width: 600px;
+            height: 60px;
+            border: 1px solid rebeccapurple;
+            border-radius: 30px;
+
+            margin: 0 auto; 
+
+        }
+
+        .search_bar input{
+            width: 70%;  /*부모의 크기의 70 퍼 600의 70퍼센트*/
+            height: 40px;
+            margin-left: 20px;
+            margin-top: 10px;
+
+            border: none;
+            outline: none;
+
+        }
+
+        .search_list{
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!---->
+    <nav>
+        <div class="menu">
+            <div class="item item1">Gmail</div>
+            <div class="item item1">로그인</div>
+            <div class="item item1">이미지</div>
+            <div  class="item item2"></div>
+        </div>
+    </nav>
+
+    <!-- 로고 타이틀 영역-->
+    <div class="logo_title">
+        <img src="https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+
+    </div>
+
+    <!--검색바 영역-->
+    <div class="search">
+        <div class="search_bar">
+            <input type="text" onfocus="showList()" onblur="hideList()">
+            <ul class="search_list">
+                <li>모자</li>
+                <li>선크림</li>
+                <li>반바지</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showList(){
+            //검색영역을 보이게 
+            //검색바의 크기를 auto로 설정 (내용만큼 크기가 결정됨.)
+            let search_list = document.querySelector(".search_list");
+            let search_bar = document.querySelector(".search_bar");
+            search_list.style.display="block";
+            search_bar.style.height="auto";
+
+
+        }
+
+        function hideList(){
+
+            setTimeout( function(){
+            let search_list = document.querySelector(".search_list");
+            let search_bar = document.querySelector(".search_bar");
+
+            search_list.style.display="none";
+            search_bar.style.height="60px";
+
+            
+                
+            }, 2000); //2초후 사라지게끔
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

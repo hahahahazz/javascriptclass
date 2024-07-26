@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index5</title>
+    <style>
+        .wrap{
+            width: 1200px;
+            border: 1px solid black;
+
+            margin: 0 auto;
+        }
+    /**/    
+        header{
+            border: 1px solid black;
+            height: 100px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        header .img{
+            width: 200px;
+            height: 60px;
+            background-image: url(images/logo.png);
+            background-position: center;
+            background-size: cover;
+
+            position: absolute;
+            left: 30px;
+            top: 10px;
+        }
+        /*검색바 부분*/
+        .search{
+            width: 300px;
+            height: 50px;
+            border: 1px solid black;
+
+            display: flex;
+            position: absolute;
+            right: 30px;
+            bottom: 0px;
+        }
+        .search input{
+            width: 230px;
+            margin-left: 20px;
+            border: none;
+            outline: none; /*클릭햇을때 나오는 선*/
+        }
+        .search_btn{
+            margin-top: 5px;
+            width: 40px;
+            height: 40px;
+            background-color: azure;
+            background-image: url( https://previews.123rf.com/images/swavo/swavo1409/swavo140900005/31571158-%EB%8F%8B%EB%B3%B4%EA%B8%B0-%EC%95%84%EC%9D%B4%EC%BD%98.jpg) ;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+/**/
+        nav{
+            border: 1px solid black;
+            height: 60px;
+            background-color: beige;
+        }
+
+        nav ul{
+            list-style: none; /*리스트의 점을 지우는*/
+            display: flex; /* 가로로 이어지게*/
+        }
+        nav ul li{
+            padding-left: 5px;
+            padding-right: 5px;
+
+        }
+        a{
+            text-decoration: none; /*밑줄 지워지게*/
+            color: violet; 
+        }
+
+/**/        
+        section{
+            border: 1px solid black;
+            background-color: bisque;
+            
+        }
+        section ul{
+            width: 900px;
+           /* border: 1px solid black;*/
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+
+            display: flex;
+            flex-wrap: wrap; /*사이즈에 맞춘뒤 넘어가면 다음줄로 넘겨주는 디스플레이 플렉스의 wrap속성임*/
+            margin: 0 auto;  /*가운데 오게*/
+
+        }
+        section ul li{
+            width: 280px;
+            height: 300px;
+            border: 1px solid rgba(139, 69, 19, 0.271);
+
+            margin: 8px;
+            padding: 10px;  /*원래 패딩을 추가하면 박스의 크기가 커진다고 생각하면된다 .*/
+            box-sizing: border-box;   /* 패딩을 추가해도 박스의 크기가 커지지않는다 원래크기유지한다*/
+        
+            text-align: center;
+
+        }
+
+/**/
+
+
+        footer{
+            border: 1px solid black;
+            height: 100px;
+            background-color: blanchedalmond;
+            display: flex;  /* 푸터의 div 가로로 두고싶으면  이거 쓰면된ㄴ다 부모에 쓴다.*/
+        }
+        footer > div{
+            width: 33%;
+            border: 1px solid teal;
+            height: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <header>
+            <!-- 이 div는 로고 이미지 입력 요소 -->
+            <div class="img"></div>
+            <!--아래 div 는 검색바-->
+            <div class="search">
+                <input type="text">
+                <div class="search_btn"> 이미지</div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li> <a href="login.html"> 로그인 </a></li>
+                <li> <a href="joinus.html"> 회원가입 </a></li>
+                <li> <a href="index4.html"> 홈으로 </a></li>
+            </ul>
+        </nav>
+
+        <section> 
+            <ul>
+                <li> 
+                    <img src="images/img01.png" alt="">
+                    <p>자바 웹 개발과정</p>
+                    <p>07.01 개강</p>
+                </li>
+                <li> 
+                    <img src="images/img01.png" alt="">
+                    <p>자바 웹 개발과정</p>
+                    <p>07.01 개강</p>
+                </li>
+                <li> 
+                    <img src="images/img01.png" alt="">
+                    <p>자바 웹 개발과정</p>
+                    <p>07.01 개강</p>
+                </li>
+                <li> 
+                    <img src="images/img01.png" alt="">
+                    <p>자바 웹 개발과정</p>
+                    <p>07.01 개강</p>
+                </li>
+                <li> 
+                    <img src="images/img01.png" alt="">
+                    <p>자바 웹 개발과정</p>
+                    <p>07.01 개강</p>
+                </li>
+                <li> 
+                    <img src="images/img01.png" alt="">
+                    <p>자바 웹 개발과정</p>
+                    <p>07.01 개강</p>
+                </li>
+              
+            </ul>
+            
+        </section>
+
+        <footer> 
+
+            <div>a</div>
+            <div>b</div>
+            <div>c</div>
+        </footer>
+
+
+
+
+    </div>
+
+
+    <script>
+
+
+
+    </script>
+    
+</body>
+</html>

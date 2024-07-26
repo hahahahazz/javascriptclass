@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 </title>
+    <style>
+.wrap{
+            width: 1200px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+/**/    
+        header{
+            border: 1px solid black;
+            height: 100px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        header .img{
+            width: 200px;
+            height: 60px;
+            background-image: url(images/logo.png);
+            background-position: center;
+            background-size: cover;
+
+            position: absolute;
+            left: 30px;
+            top: 10px;
+        }
+/*검색바 부분*/
+        .search{
+            width: 300px;
+            height: 50px;
+            
+            display: flex;
+            position: absolute;
+            right: 30px;
+            bottom: 5px;
+        }
+        .search input{
+            width: 230px;
+            margin-left: 20px;
+            border: none;
+            outline: none; /*클릭햇을때 나오는 선*/
+        }
+        .search_btn{
+            margin-top: 5px;
+            width: 40px;
+            height: 40px;
+            background-color: azure;
+            background-image: url( https://previews.123rf.com/images/swavo/swavo1409/swavo140900005/31571158-%EB%8F%8B%EB%B3%B4%EA%B8%B0-%EC%95%84%EC%9D%B4%EC%BD%98.jpg) ;
+            background-position: center;
+            background-size: cover;
+            margin-left: 20px;
+
+        }
+/**/
+nav{
+            /*border: 1px solid black;*/
+            height: 60px;
+            background-color: beige;
+             
+        }
+
+        nav ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none; /*리스트의 점을 지우는*/
+            display: flex; /* 가로로 이어지게*/
+        }
+        nav ul li{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        a{
+            text-decoration: none; /*밑줄 지워지게*/
+            color: violet; 
+        }
+
+/**/
+        section{
+            background-color: bisque;
+            height: 500px;
+
+        }
+        form{           
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding: 80px;            
+        }
+        section input{
+            width: 300px;
+            margin-left: 40px;
+            outline: none;
+            font-size: 20px;
+        }
+        button{
+            margin: 20px;
+        }
+
+ /**/
+        footer{
+            height: 100px;
+            display: flex;  /* 푸터의 div 가로로 두고싶으면  이거 쓰면된ㄴ다 부모에 쓴다.*/
+            padding: 10px;
+        }
+        footer > div{
+            width: 33%;
+            /*border: 1px solid teal;*/
+            height: 100px;
+            line-height: 100px;  /*줄 간격 위아래  이걸하면 글자가 중간으로 간다  높이의 크기와 같게해야함*/
+        }
+
+    </style>
+
+    <script>
+        function loginid(){
+            let useridA = document.loginform.userid;
+            let userid = useridA.value;
+
+            let passwordA = document.loginform.password;
+            let password = passwordA.value;
+
+            if(userid==""){
+                alert("아이디를 입력하세요");
+                useridA.focus();
+            }else if(password==""){
+                alert("비밀번호를 입력하세요");
+                passwordA.focus();
+            }else{
+                alert("일치하는 회원정보가 없습니다.");
+            }
+        }
+        function signin(){
+            alert("현재 회원가입을 받지 않고 있습니다. 감사합니다^^");
+        }
+
+    </script>
+</head>
+<body>
+   
+        <div class="wrap">
+            <header>
+                <!-- 이 div는 로고 이미지 입력 요소 -->
+                <div class="img"></div>
+                <!--아래 div 는 검색바-->
+                <div class="search">
+                    <input type="text">
+                    <div class="search_btn"></div>
+                </div>
+            </header>
+    
+            <nav>
+                <ul>
+                    <li> <a href="index6.html"> 홈으로 </a></li>
+                    <li> <a href="joinus.html"> 회원가입 </a></li>
+                </ul>
+            </nav>
+    
+            <section> 
+               <!--폼태그 안에 있는 버튼은 기본타입이 submit 으로 설정되어있다.
+    로그인 버튼 만들때는 폼태그로!-->
+
+    <form name="loginform" action="login" method="post">
+        <input type="text" id="userid">
+        <input type="password" id="password">
+
+        <button type="button" onclick="loginid()"> 로그인 </button>
+        <button type="button" onclick="signin()"> 회원가입</button>
+        </form>
+                
+            </section>
+    
+            <footer> 
+                <div><img src="images/footer_acorn.png" alt=""></div>
+                <div>(주)에이콘이즈 에이콘아카데미(홍대)</div>
+                <div>COPYRIGHT(C) HBILAB ALL RIGHTS RESERVED.</div>
+              
+            </footer>
+    
+    
+    
+    
+        </div>      
+
+</body>
+</html>

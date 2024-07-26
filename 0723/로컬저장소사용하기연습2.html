@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬저장소사용하기 5,6</title>
+</head>
+<body>
+    <input type="text" id="word"> <button onclick="search_word()">단어검색</button><button onclick="remember()">조회</button>
+   
+    <ul class="list">
+    </ul>
+
+    <ul class="list2"> </ul>
+
+    <script>
+        let searchlist = [];
+
+        function search_word(){
+            let word = document.querySelector("#word").value;
+            searchlist.push(word);
+            console.log(searchlist);
+
+            let aaa = JSON.stringify(searchlist);
+            localStorage.setItem("search",aaa);
+        }
+
+        function remember(){
+            let aaa = localStorage.getItem("search");
+            console.log(aaa);
+            searchlist = JSON.parse(aaa);
+
+            // 화면 보여주기
+            let str = "";
+            for(let i= 0; i<searchlist.length; i++){
+                let item = searchlist[i];
+                str += "<li>" + item + "</li>";
+            }
+            let list = document.querySelector(".list");
+            list.innerHTML = str;
+
+        }
+
+
+
+
+
+        let snacks = ['새우깡', '양파링', '먹태깡'];
+
+        function bbb(){
+            localStorage.setItem("snacks", JSON.stringify(snacks));
+        }
+
+        function ccc(){
+            let ddd = localStorage.getItem("snacks");
+
+            if( ddd != null){
+                snacks = JSON.parse(ddd);
+            }
+
+            let strr = "";
+            for(let j=0; j<snacks.length; j++ ){
+                strr += `<li data-id='${j}''>${snacks[j]} <button onclick="deleteItem(this)">삭제</button></li>`;
+            }
+            let list2 = document.querySelector(".list2");
+            list2.innerHTML = strr;
+
+        }
+        function deleteItem(obj){
+            console.log(obj);
+            let li = obj.parentElement;
+            let id = li.getAttribute("data-id");
+            alert(id);
+            li.remove();
+
+            snacks.splice(id,1);
+            console.log(snacks);
+        }
+
+        bbb();
+        ccc();
+        
+
+
+
+
+
+
+
+
+
+
+     
+
+    </script>
+    
+</body>
+</html>

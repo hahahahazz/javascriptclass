@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 우아한 전달</title>
+
+    <script>
+
+
+        function showMyinfo(name, email, tel, address){
+            console.log(name);
+            console.log(tel);
+            console.log(email);
+            console.log(address);
+
+        }
+        
+        
+        function showMyinfoGrace(info){
+            console.log(info.name);
+            console.log(info.email);
+            console.log(info.tel);
+            console.log(info.address);
+            
+        }
+        //이름, 이메일, 전화번호, 주소 
+        showMyinfo("황지영", "http://naver.com", "019-8765-4321", "서울시 서대문구 홍대동");
+
+        showMyinfoGrace({
+            name:"황지영",
+            email:"http://naver.com",
+            tel:"019-8765-4321",
+            address:"서울시 서대문구 홍대동"
+        } );
+
+
+
+    </script>
+
+
+</head>
+<body>
+    
+
+
+
+</body>
+</html>

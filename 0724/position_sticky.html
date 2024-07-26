@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position sticky</title>
+    <style>
+
+        header{
+            height: 100px;
+            background-color: lightcyan;
+        }
+        nav{
+            height: 60px;
+            background-color: lightcoral;
+
+            position: sticky;  /*자기자리를 지키다가 스크롤내리면 0px 에 고정됨 */
+            /*fixed는  처음부터 0px로 한다면 처음부터 맨위에 붙어버린다.*/
+            top: 0px;
+        }
+        section{
+            height: 5000px;
+            background-color: cornflowerblue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>header</header>
+    <nav>nav</nav>
+    <section>내용</section>
+
+</body>
+</html>

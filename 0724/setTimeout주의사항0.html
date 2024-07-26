@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            console.log("hi");
+        }
+
+
+
+        //전역변수 = 함수밖에서 사용되는 변수 
+        let time;
+
+        function hide(){
+            if(time != null){
+                clearTimeout(time);  //setTimeout해제시킬수잇는!
+            }
+
+
+            //setTimeout (함수, 시간);   형태임.
+                        //함수로 들어와야한다. 함수는 콜백함수로!
+            time = setTimeout(function(){
+                console.log("bye");
+
+            } ,2000);  
+        }
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <input type="text" onfocus="show()" onblur="hide()">
+    
+</body>
+</html>

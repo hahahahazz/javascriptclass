@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 가운데 3</title>
+    <style>
+
+        .item{
+            height: 100px;
+            border: 1px solid black;
+
+            position: relative;            
+        }
+        .item_child{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /*중간 으로 위치가 이동하엿기 때문에 중간부터 시작이라 내용은 오른쪽 아래로 치우쳐져보인다*/
+
+            transform: translate(-50%, -50%);  /*  그래서 내용자체의 중간을 중간으로 하게끔 이거까지 써야함*/
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="item">
+        <div class="item_child">요소 가운데</div> 
+    </div>
+    
+</body>
+</html>

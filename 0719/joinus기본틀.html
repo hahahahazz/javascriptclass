@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 기본틀</title>
+    <style>
+        table{
+            width: 1000px;
+            border: 1px solid black;
+        }
+        th, td{
+            border: 1px solid black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <form name="aaa" method="post">
+        <table>           
+                <caption>회원가입</caption>
+                         
+                <tr>
+                    <th>이름</th><td><input type="text" id="realname"></td>
+                </tr>
+                <tr>
+                    <th>아이디</th><td><input type="text"  id="submitid"><button>중복확인</button></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th><td><input type="text" id="submitpassword">!!비밀번호는 8자리 이상 영문,숫자를 이용하여 작성해 주세요.</td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th><td><input type="text" id="passwordCheck"></td>
+                </tr>
+                <tr>
+                    <th>이메일</th><td><input type="text" id="email">@ <input type="text"id="email">
+
+                    <select name="" id="">
+                        <option value=""> 선택하세요 </option>
+                        <option value=""> naver.com</option>
+                        <option value=""> gmail.com</option>
+                        <option value=""> kakao.com</option>
+                        <option value=""> hanmail.net</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>학년 / 반</th>
+                    <td>
+                        <select name="" id=""> 
+                            <option value="">선택하세요</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                        학년
+                        <select name="" id=""> 
+                            <option value="">선택하세요</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                        </select>
+                          반</td>
+                </tr>
+                    
+                <tr>
+                    <td colspan="2">
+                        <button>가입</button>
+                        <button>취소</button>
+                    </td>
+                   
+                </tr>
+         
+        </table>
+
+
+    </form>
+</body>
+</html>

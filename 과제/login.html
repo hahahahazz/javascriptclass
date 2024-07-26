@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            let frm = document.frm
+            let userId = frm.userId
+            let userPw1 = frm.userPw1
+            if(userId.value ==""){
+                alert("아이디를 입력하세요");
+                userId.focus();
+            }else if(userPw1.value ==""){
+            alert("비밀번호를 입력하세요");
+            userPw1.focus();
+        }else{
+            alert("로그인에 성공하였씁니다.");
+        }
+        }
+        
+
+
+    </script>
+</head>
+<body>
+    <form name="frm" method="post">
+        <div class="logWrap">
+            <div class="logImg"></div>
+            <div class="logInfo">
+                <input type="text" name="userId">
+                <input type="password" name="userPw1">
+                <button type="button" onclick="check()">로그인</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
